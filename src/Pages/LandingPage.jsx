@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button, Row, Col } from 'react-bootstrap'
+import { Button, Row, Col, Card } from 'react-bootstrap'
 
 function LandingPage() {
   return (
     <>
+    {/* head */}
       <Row>
         <Col></Col>
 
@@ -25,7 +26,68 @@ function LandingPage() {
         </Col>
 
         <Col></Col>
+        
       </Row>
+
+      {/*Card Section */}
+      <div className="container mt-3 mb-4 flex-column justify-content-center align-items-center flex-column w-100">
+        <h5 className='text-center text-warnin'>Features</h5>
+        <div className='card mb-5 mt-5 d-flex align-items-center justify-content-between w-100'>
+
+          <Card style={{ width: '18rem' }} className='bg-info'>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+              <Card.Title>Managing Videos</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: '18rem' }} className='bg-info'>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+              <Card.Title>Categorized Video</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: '18rem' }} className='bg-info'>
+            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+              <Card.Title>Watch History</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
+
+        </div>
+      </div>
+
+      {/* details section*/}
+      <div className="container border d-flex align-items-center justify-content-center mt-5 p-5">
+        <div className="col-lg-5">
+          <h4 className='text-warning fw-bolder' >Simple,Powerful & Fast</h4>
+          <h6 className='m-3'><span className='text-warning fw-bolder'>Play Everything</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
+
+          <h6 className='m-3'><span className='text-warning fw-bolder'>Categorize Video</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
+
+          <h6 className='m-3'><span className='text-warning fw-bolder'>Managing Videos</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
+
+        </div>
+
+        <div className='col-lg-5 ms-2'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/exkJKrAVzAc?si=hwtDrMj_-LNiJiGb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+      </div>
+
     </>
   )
 }
