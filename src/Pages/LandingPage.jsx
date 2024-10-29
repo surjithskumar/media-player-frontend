@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Row, Col, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function LandingPage() {
   return (
@@ -15,7 +16,7 @@ function LandingPage() {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam cumque voluptatum minima fugit quos illo facere in a incidunt sit. Dolorum cum autem quidem quaerat neque quam expedita minus temporibus?
           </p>
-          <Button className="btn btn-info">Get Started</Button>
+          <Link style={{textDecoration:"none"}} to={'/home'} className="btn btn-info">Get Started</Link>
         </Col>
 
         <Col lg={5}>
