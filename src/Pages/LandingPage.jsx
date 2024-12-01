@@ -1,96 +1,114 @@
-import React from 'react'
-import { Button, Row, Col, Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Button, Row, Col, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   return (
     <>
-    {/* head */}
-      <Row>
-        <Col></Col>
-
-        <Col lg={5}>
-          <h1 style={{ color: "blueviolet", fontSize: "40px" }}>
-            Welcome to <span className='text-warning'>Media-Player</span>
+      {/* Header Section */}
+      <Row className="text-center align-items-center p-4 mx-0">
+        <Col xs={12} lg={5} className="mb-4 mb-lg-0">
+          <h1 style={{ color: "blueviolet", fontSize: "2.5rem" }}>
+            Welcome to <span className="text-warning">Media-Player</span>
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam cumque voluptatum minima fugit quos illo facere in a incidunt sit. Dolorum cum autem quidem quaerat neque quam expedita minus temporibus?
+            The media player offers a simple and intuitive interface, making it easy to play your favorite music, videos, and podcasts. Experience crystal-clear sound and stunning visuals with high-quality audio and video playback. The versatile format support ensures seamless playback of a wide range of media formats. Enjoy uninterrupted playback with advanced features like buffering and queuing.
           </p>
-          <Link style={{textDecoration:"none"}} to={'/home'} className="btn btn-info">Get Started</Link>
+          <Link
+            to={'/home'}
+            className="btn btn-info"
+            style={{ textDecoration: "none" }}
+          >
+            Get Started
+          </Link>
         </Col>
-
-        <Col lg={5}>
+        <Col xs={12} lg={5}>
           <img
+            className="img-fluid"
             src="https://cdn.dribbble.com/users/1237300/screenshots/6478927/__-1_1_____.gif"
             alt="Media player animation"
           />
         </Col>
-
-        <Col></Col>
-        
       </Row>
 
-      {/*Card Section */}
-      <div className="container mt-3 mb-4 flex-column justify-content-center align-items-center flex-column w-100">
-        <h5 className='text-center text-warnin'>Features</h5>
-        <div className='card mb-5 mt-5 d-flex align-items-center justify-content-between w-100'>
+      {/* Features Section */}
+      <div className="container text-center mt-4 px-3">
+        <h5 className="text-warning">Features</h5>
+        <Row className="mt-5 justify-content-center">
+          <Col xs={12} md={6} lg={4} className="mb-4">
+            <Card className="bg-info h-100">
+              <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6t1Lq5DDZz5-EbP7wzd1RSKq0L4m280xGHQ&s" alt="Managing Videos" />
+              <Card.Body>
+                <Card.Title>Managing Videos</Card.Title>
+                <Card.Text>
+                  Organize, upload, and manage all your videos effortlessly.
+                </Card.Text>
+                <Button variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
 
-          <Card style={{ width: '18rem' }} className='bg-info'>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Managing Videos</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
+          <Col xs={12} md={6} lg={4} className="mb-4">
+            <Card className="bg-info h-100">
+              <Card.Img variant="top" src="https://i.ytimg.com/vi/pVsGz1P1RjI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAcm7AlYTYsXVnl79mQZAQw56h1Gw" alt="Categorized Videos" />
+              <Card.Body>
+                <Card.Title>Categorized Videos</Card.Title>
+                <Card.Text>
+                  Browse through your videos by categories for easy access.
+                </Card.Text>
+                <Button variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
 
-          <Card style={{ width: '18rem' }} className='bg-info'>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Categorized Video</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: '18rem' }} className='bg-info'>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Watch History</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-
-        </div>
+          <Col xs={12} md={6} lg={4} className="mb-4">
+            <Card className="bg-info h-100">
+              <Card.Img variant="top" src="https://www.shutterstock.com/shutterstock/videos/1068289796/thumb/8.jpg?ip=x480" alt="Watch History" />
+              <Card.Body>
+                <Card.Title>Watch History</Card.Title>
+                <Card.Text>
+                  Keep track of the videos you've watched for convenience.
+                </Card.Text>
+                <Button variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </div>
 
-      {/* details section*/}
-      <div className="container border d-flex align-items-center justify-content-center mt-5 p-5">
-        <div className="col-lg-5">
-          <h4 className='text-warning fw-bolder' >Simple,Powerful & Fast</h4>
-          <h6 className='m-3'><span className='text-warning fw-bolder'>Play Everything</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
-
-          <h6 className='m-3'><span className='text-warning fw-bolder'>Categorize Video</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
-
-          <h6 className='m-3'><span className='text-warning fw-bolder'>Managing Videos</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit voluptatem alias accusantium deleniti voluptas eum sapiente a reprehenderit fugiat unde illum quam, maxime quibusdam non quisquam porro, exercitationem sed enim!</h6>
-
-        </div>
-
-        <div className='col-lg-5 ms-2'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/exkJKrAVzAc?si=hwtDrMj_-LNiJiGb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
+      {/* Details Section */}
+      <div className="container border mt-5 p-4 px-3">
+        <Row className="align-items-center">
+          <Col xs={12} lg={6} className="mb-4 mb-lg-0">
+            <h4 className="text-warning fw-bolder">Simple, Powerful & Fast</h4>
+            <h6 className="mt-3">
+              <span className="text-warning fw-bolder">Play Everything </span>
+              Our media player supports a wide range of formats, so you can enjoy your favorite media content on any device.Access and play your entire media library, from music to movies, in one convenient location.
+            </h6>
+            <h6 className="mt-3">
+              <span className="text-warning fw-bolder">Categorize Videos </span>
+              The media player intelligently categorizes your videos based on genre, actor, or director, making it easy to find and enjoy your favorite content. With personalized recommendations, you'll always discover something new to watch.
+            </h6>
+            <h6 className="mt-3">
+              <span className="text-warning fw-bolder">Manage Videos </span>
+              Effortlessly manage your video library with features like tagging, rating, and creating playlists. Organize your content the way you want and quickly find what you're looking for.
+            </h6>
+          </Col>
+          <Col xs={12} lg={6}>
+            <div className="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/exkJKrAVzAc?si=hwtDrMj_-LNiJiGb"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </Col>
+        </Row>
       </div>
-
     </>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;
